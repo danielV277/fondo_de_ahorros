@@ -1,0 +1,54 @@
+
+{% extends './base.html' %}
+
+{% block title %}Actualizar{% endblock %}
+
+{% block customCSS %}
+    <style>
+        .form-group {
+            margin-bottom: 20px; /* Agregar espacio al final de cada form-group */
+        }
+        .btn-submit {
+            width: 100%; /* Ancho completo */
+            font-size: 1.2rem; /* Tamaño de fuente más grande */
+            margin-top: 20px; /* Espacio superior */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h2>{{inte}}</h2>
+    <div class="container mt-4">
+        <h1>Actualizar</h1>
+        <form action="actualizar" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="identificacion">Identificación</label>
+                        <input required type="text" maxlength="10" class="form-control" id="id" name="id" placeholder="Ingrese la identificación">
+                    </div>
+                    <div class="form-group">
+                        <label for="key">Dato a actualizar</label>
+                        <select class="custom-select" id="key" name="key" required>
+                            <option value="" selected disabled>Seleccione...</option>
+                            <option value="barrio">Barrio</option>
+                            <option value="direccion">Direccion</option>
+                            <option value="telefono">Telefono</option>
+                            <option value="correo">correo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_value">Nuevo dato</label>
+                        <input required type="text" class="form-control" id="new_value" name="new_value" placeholder="Ingrese el nuevo valor">
+                    </div>
+                    
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

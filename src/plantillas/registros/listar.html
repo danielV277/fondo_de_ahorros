@@ -1,0 +1,40 @@
+{% extends './base.html' %}
+
+{% block title %}Listar{% endblock %}
+
+{% block body %}
+
+<!-- <h2>{{registross}}</h2> -->
+<div class="container mt-4">
+    <h1 class="mb-4">Lista de registros</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>id_integrante</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Fecha registro</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+            <tr>
+                <td>{{ registro.id_registro }}</td>
+                <td>{{ registro.id_integrante }}</td>
+                <td>{{ registro.tipo }}</td>
+                <td>{{ registro.valor }}</td>
+                <td>{{ registro.fecha_registro }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    
+{% endblock %}
+
+{% block scripts %}
+<script>
+</script>
+{% endblock %}

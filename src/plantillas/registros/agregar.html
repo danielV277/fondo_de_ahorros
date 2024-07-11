@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+
+{% block title %}Agregar{% endblock %}
+
+{% block customCSS %}
+    <style>
+        .form-group {
+            margin-bottom: 20px; /* Agregar espacio al final de cada form-group */
+        }
+        .btn-submit {
+            width: 100%; /* Ancho completo */
+            font-size: 1.2rem; /* Tamaño de fuente más grande */
+            margin-top: 20px; /* Espacio superior */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Datos registro</h1>
+        <form action="agregar" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="identificacion">Identificación Integrante</label>
+                        <input required type="text" class="form-control" id="id_integrante" name="id_integrante" maxlength="10" placeholder="Ingrese la identificación">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="valor">Valor</label>
+                        <input required type="text" class="form-control" id="valor" name="valor" placeholder="Ingrese el valor">
+                    </div>
+                    
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        
+    </div>
+
+    
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
