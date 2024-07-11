@@ -23,6 +23,10 @@ Instrucciones de uso
         (http://localhost:5000/api/registros/listar)
         (http://localhost:5000/api/registros/agregar)
         
+        para Ahorro Generales
+        (http://localhost:5000/api/ahorros/listar)
+
+        
         modifica el puerto y el host 
 
     7. y ya puedes hacer uso de un gestor de integrantes y ahorros
