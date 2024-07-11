@@ -1,5 +1,4 @@
 from database.db import get_connection
-from .entities.Integrante import Integrante
 from .entities.Registro import Registro
 from datetime import datetime
 

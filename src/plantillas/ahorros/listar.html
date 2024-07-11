@@ -1,0 +1,41 @@
+{% extends './base.html' %}
+
+{% block title %}Listar{% endblock %}
+
+{% block body %}
+
+<!-- <h2>{{registross}}</h2> -->
+<div class="container mt-4">
+    <h1 class="mb-4">Lista Ahorros</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>id_integrante</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Numero aportes</th>
+                <th>Ahorros totales</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ahorro in ahorros %}
+            <tr>
+                <td>{{ ahorro.id_integrante }}</td>
+                <td>{{ ahorro.nombre_integrante }}</td>
+                <td>{{ ahorro.apellidos_integrantes }}</td>
+                <td>{{ ahorro.numero_aportes }}</td>
+                <td>{{ ahorro.ahorros_totales }}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+    
+{% endblock %}
+
+{% block scripts %}
+<script>
+</script>
+{% endblock %}

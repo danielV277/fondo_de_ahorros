@@ -39,6 +39,15 @@
                 <a class="dropdown-item registros" href="{{url_for('Registros_blueprint.add_registro')}}">Agregar</a>
               </div>
             </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAhorrosGenerales" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ahorros generales
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownAhorrosGenerales">
+                <a class="dropdown-item ahorros" href="{{url_for('Ahorros_blueprint.get_ahorros')}}">Listar</a>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
